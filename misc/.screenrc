@@ -1,0 +1,9 @@
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %C%a "
+
+termcapinfo xterm* ti@:te@
+
+mousetrack on
+
+term screen-256color
