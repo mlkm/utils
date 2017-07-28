@@ -1,0 +1,76 @@
+#!/bin/bash
+
+txtblk='\e[0;30m' # Black - Regular
+txtred='\e[0;31m' # Red
+txtgrn='\e[0;32m' # Green
+txtylw='\e[0;33m' # Yellow
+txtblu='\e[0;34m' # Blue
+txtpur='\e[0;35m' # Purple
+txtcyn='\e[0;36m' # Cyan
+txtwht='\e[0;37m' # White
+bldblk='\e[1;30m' # Black - Bold
+bldred='\e[1;31m' # Red
+bldgrn='\e[1;32m' # Green
+bldylw='\e[1;33m' # Yellow
+bldblu='\e[1;34m' # Blue
+bldpur='\e[1;35m' # Purple
+bldcyn='\e[1;36m' # Cyan
+bldwht='\e[1;37m' # White
+unkblk='\e[4;30m' # Black - Underline
+undred='\e[4;31m' # Red
+undgrn='\e[4;32m' # Green
+undylw='\e[4;33m' # Yellow
+undblu='\e[4;34m' # Blue
+undpur='\e[4;35m' # Purple
+undcyn='\e[4;36m' # Cyan
+undwht='\e[4;37m' # White
+bakblk='\e[40m'   # Black - Background
+bakred='\e[41m'   # Red
+bakgrn='\e[42m'   # Green
+bakylw='\e[43m'   # Yellow
+bakblu='\e[44m'   # Blue
+bakpur='\e[45m'   # Purple
+bakcyn='\e[46m'   # Cyan
+bakwht='\e[47m'   # White
+txtrst='\e[0m'    # Text Reset
+
+cursav='\e[s'     # Save cursor position
+curres='\e[u'     # Restore cursor position
+
+PStxtblk='\[\e[0;30m\]' # Black - Regular
+PStxtred='\[\e[0;31m\]' # Red
+PStxtgrn='\[\e[0;32m\]' # Green
+PStxtylw='\[\e[0;33m\]' # Yellow
+PStxtblu='\[\e[0;34m\]' # Blue
+PStxtpur='\[\e[0;35m\]' # Purple
+PStxtcyn='\[\e[0;36m\]' # Cyan
+PStxtwht='\[\e[0;37m\]' # White
+PSbldblk='\[\e[1;30m\]' # Black - Bold
+PSbldred='\[\e[1;31m\]' # Red
+PSbldgrn='\[\e[1;32m\]' # Green
+PSbldylw='\[\e[1;33m\]' # Yellow
+PSbldblu='\[\e[1;34m\]' # Blue
+PSbldpur='\[\e[1;35m\]' # Purple
+PSbldcyn='\[\e[1;36m\]' # Cyan
+PSbldwht='\[\e[1;37m\]' # White
+PSunkblk='\[\e[4;30m\]' # Black - Underline
+PSundred='\[\e[4;31m\]' # Red
+PSundgrn='\[\e[4;32m\]' # Green
+PSundylw='\[\e[4;33m\]' # Yellow
+PSundblu='\[\e[4;34m\]' # Blue
+PSundpur='\[\e[4;35m\]' # Purple
+PSundcyn='\[\e[4;36m\]' # Cyan
+PSundwht='\[\e[4;37m\]' # White
+PSbakblk='\[\e[40m\]'   # Black - Background
+PSbakred='\[\e[41m\]'   # Red
+PSbakgrn='\[\e[42m\]'   # Green
+PSbakylw='\[\e[43m\]'   # Yellow
+PSbakblu='\[\e[44m\]'   # Blue
+PSbakpur='\[\e[45m\]'   # Purple
+PSbakcyn='\[\e[46m\]'   # Cyan
+PSbakwht='\[\e[47m\]'   # White
+PStxtrst='\[\e[0m\]'    # Text Reset
+
+PScursav='\[\e[s\]'     # Save cursor position
+PScurres='\[\e[u\]'     # Restore cursor position
+
