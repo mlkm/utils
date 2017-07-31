@@ -157,8 +157,8 @@ if [ -n "$BASH" ]; then
 
   function varalias {
     if [ $# -ne 2 ]; then
-      errcho "varalias $*: failed"
-      return 1;
+      echo >&2 "varalias $*: failed"
+      return 1
     fi
     k="$1"
     v="$2"
@@ -283,7 +283,7 @@ if [ -n "$BASH" ]; then
 
   varalias k91 'kill -9 %1'
   varalias kk91 'kill -9 %1'
-  varalias ka 'killall'
+  varalias gk 'pkill -g $$'
 
   varalias hl '~/highlighter.py'
   varalias hlall "~/highlighter.py '.*'"
