@@ -312,6 +312,14 @@ if [ -n "$BASH" ]; then
 
   varalias PS 'ps -o pid,ppid,pgid,comm'
 
+  function escape {
+    while read; do
+      printf '%q\n' "${REPLY}"
+    done
+  }
+
+  varalias N 'nice -n 19'
+
   ###
 
   source ~/.local-profile.sh
