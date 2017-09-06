@@ -320,6 +320,26 @@ if [ -n "$BASH" ]; then
 
   varalias N 'nice -n 19'
 
+  function get_process_tree {
+    ROOT_PID=${1}
+    if [[ -z "${ROOT_PID}" ]]; then
+      return 1
+    fi
+
+    for PID in "${@}"; do
+      /bin/echo "${PID}"
+      get_process_tree $(/usr/bin/pgrep -P "${PID}")
+    done
+  }
+
+  varalias cdt 'cd `mktemp -d`'
+
+  varalias pk '/usr/bin/pkill -s 0 --'
+
+  function process_counts {
+    ps aux | awk '{print $11}' | sort | uniq -c | sort -n
+  }
+
   ###
 
   source ~/.local-profile.sh
@@ -327,5 +347,3 @@ if [ -n "$BASH" ]; then
   export NOTFIRSTRUN=true
 
 fi
-
-
