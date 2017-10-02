@@ -32,7 +32,7 @@ if [ -n "$BASH" ]; then
   fi
 
   export PROMPT_INFO="${PSbldblu}\$(date +%H:%M:%S\ %d.%m.%y) ${PSbldred}\u@\h ${CWD_PS_COLOR}\w${PSbldylw}\$(__git_ps1) ${PSbldcyn}${DISPLAY} ${PSbldblu}\${PIPES_STR} ${PSbldpur}${VIRTUAL_ENV/~/\~}"
-  export TITLE_INFO="$(echo ${PROMPT_INFO} | sed 's_\\\[[^]]*\\\]__g')\\\$ \$(LAST)"
+  export TITLE_INFO="$(echo ${PROMPT_INFO} | sed 's_\\\[[^]]*\\\]__g')"
   export PS1="\[\033]0;${TITLE_INFO}\007\]\n${PROMPT_INFO}\n${PSbldwht}\$ ${PStxtrst}"
 
   export EDITOR=vim
@@ -55,8 +55,9 @@ if [ -n "$BASH" ]; then
     cols="`tput cols`"
     echo -en ${color}
     echo -n "$1"
-    printf ' %.0s' `seq $(bc <<< ${cols}-${len})`
+    printf ' %.0s' `seq $(bc <<< ${cols}-${len}-1)`
     echo -en ${txtrst}
+    echo
   }
 
   function Forcefully {
@@ -145,7 +146,7 @@ if [ -n "$BASH" ]; then
 
   export shortLast=`(LAST; echo '______________________________') | head -c 10`
 
-  PROMPT_COMMAND="PIPES=(\"\${PIPESTATUS[@]}\"); SetScreenWindowTitle .; I '' '\e[4;$(HostnameHash)m' && _bash_history_sync && source ~/.profile.sh"
+  PROMPT_COMMAND="PIPES=(\"\${PIPESTATUS[@]}\"); SetScreenWindowTitle .; _bash_history_sync; source ~/.profile.sh"
 
   ## reedit a history substitution line if it failed
   shopt -s histreedit
