@@ -124,3 +124,6 @@ set shortmess+=A  " Ignore swapfile warnings.
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
+
+let g:gitgutter_max_signs = 5000
+"let g:gitgutter_max_signs = 500  " default value

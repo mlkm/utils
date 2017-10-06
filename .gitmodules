@@ -7,3 +7,6 @@
 [submodule "vim/bundle/vim-csexact"]
 	path = vim/bundle/vim-csexact
 	url = https://github.com/KevinGoodsell/vim-csexact.git
+[submodule "vim/bundle/vim-gitgutter"]
+	path = vim/bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
