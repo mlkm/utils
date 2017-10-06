@@ -6,12 +6,11 @@ endfun
 
 """
 
+let g:pathogen_disabled = ['vim-gitgutter']
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
 set updatetime=250
-
-"colorscheme solarized8_dark
 
 set ruler
 set ai
@@ -28,7 +27,7 @@ set scrolloff=1000000000
 
 set list
 set listchars=tab:\|\ ,trail:X,nbsp:.
-highlight SpecialKey ctermbg=0 ctermfg=4
+highlight SpecialKey ctermbg=9 ctermfg=0
 
 syntax on
 
@@ -36,62 +35,50 @@ set cc=81
 
 set hls
 noh
-highlight Search ctermbg=4 ctermfg=15
+highlight Search ctermbg=8
 
 noremap <F5> :noh<CR>
 noremap <F9> :ene<CR>
 
 set ignorecase
 
-noremap <F3> :GitGutterToggle<CR>
-noremap <F4> :GitGutterSignsToggle<CR>
-"noremap <F5> :GitGutterLineHighlightsToggle<CR>
-let g:gitgutter_max_signs = 5000
-"let g:gitgutter_max_signs = 500  " default value
-let g:gitgutter_diff_args = '`git log --pretty=oneline --author=git5 | head -1 | cut -f1 -d" "`'
-
 set diffopt=horizontal,filler
 
 set wildmenu
 set wildmode=longest:full,full
 
-set path=.,/usr/include,**,,~,~/utils/**
+set path=.,**,
 
 set noequalalways
 
 set t_Co=256
 
-let &colorcolumn=join(range(81,999),",")
-highlight ColorColumn ctermbg=0
+"let &colorcolumn=join(range(81,999),",")
+highlight ColorColumn ctermbg=6
 
 set cursorcolumn
 set cursorline
 
-highlight CursorColumn ctermbg=17
-highlight CursorLine cterm=NONE ctermbg=17
+highlight CursorColumn ctermbg=234
+highlight CursorLine cterm=NONE ctermbg=234
 
-"highlight CursorColumn ctermbg=234
-"highlight CursorLine cterm=NONE ctermbg=234
+highlight CursorLineNr ctermbg=235 ctermfg=6
+highlight LineNr ctermbg=232 ctermfg=5
 
-highlight CursorLineNr ctermbg=0 ctermfg=6
-highlight LineNr ctermbg=0 ctermfg=5
-
-set showbreak=>>>\ 
-highlight NonText ctermbg=233 ctermfg=2
+set showbreak=>>>
+highlight NonText ctermbg=8 ctermfg=0
 
 highlight StatusLine ctermbg=0 ctermfg=6
 
 highlight Visual ctermbg=18
+
+highlight Todo ctermbg=3 ctermfg=2
 
 set fillchars=vert:\ 
 
 call SetupCommandAlias('F', 'find')
 call SetupCommandAlias('S', 'sfind')
 call SetupCommandAlias('W', 'w')
-
-"set mouse=nicr
-"noremap <LeftDrag> <NOP>
-"noremap! <LeftDrag> <NOP>
 
 noremap <Up> <Esc><C-W>k
 inoremap <Up> <Esc><C-W>k
@@ -128,7 +115,8 @@ if !exists('firstrun') || firstrun
   endif
 endif
 
-syntax keyword pyNiceOperator all conceal cchar=∀
-syntax keyword pyNiceOperator any conceal cchar=∃
-
 set shortmess+=A  " Ignore swapfile warnings.
+
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
