@@ -1,27 +1,9 @@
 [submodule "vim/bundle/vim-pathogen"]
 	path = vim/bundle/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
-[submodule "vim/bundle/vim-gitgutter"]
-	path = vim/bundle/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter.git
-[submodule "vim/bundle/vim-lambdify"]
-	path = vim/bundle/vim-lambdify
-	url = https://github.com/calebsmith/vim-lambdify.git
-[submodule "vim/bundle/vim-cute-python"]
-	path = vim/bundle/vim-cute-python
-	url = https://github.com/ehamberg/vim-cute-python.git
-[submodule "vim/bundle/vim-solarized8"]
-	path = vim/bundle/vim-solarized8
-	url = https://github.com/lifepillar/vim-solarized8.git
 [submodule "vim/bundle/csapprox"]
 	path = vim/bundle/csapprox
 	url = https://github.com/godlygeek/csapprox.git
 [submodule "vim/bundle/vim-csexact"]
 	path = vim/bundle/vim-csexact
 	url = https://github.com/KevinGoodsell/vim-csexact.git
-[submodule "vim/bundle/vim-monokai"]
-	path = vim/bundle/vim-monokai
-	url = https://github.com/sickill/vim-monokai.git
-[submodule "vim/bundle/vim256-color"]
-	path = vim/bundle/vim256-color
-	url = https://github.com/noah/vim256-color.git
