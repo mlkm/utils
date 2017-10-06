@@ -1,3 +1,8 @@
+set nocompatible
+source ~/.local-vimrc
+
+"""
+
 fun! SetupCommandAlias(from, to)
   exec 'cnoreabbrev <expr> '.a:from
         \ .' ((getcmdtype() is# ":" && getcmdline() is# "'.a:from.'")'
@@ -6,7 +11,6 @@ endfun
 
 """
 
-let g:pathogen_disabled = ['vim-gitgutter']
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 

@@ -32,12 +32,12 @@ if [ -n "$BASH" ]; then
   fi
 
   export PROMPT_INFO="${PSbldblu}\$(date +%H:%M:%S\ %d.%m.%y) ${PSbldred}\u@\h ${CWD_PS_COLOR}\w${PSbldylw}\$(__git_ps1) ${PSbldcyn}${DISPLAY} ${PSbldblu}\${PIPES_STR} ${PSbldpur}${VIRTUAL_ENV/~/\~}"
-  export TITLE_INFO="$(echo ${PROMPT_INFO} | sed 's_\\\[[^]]*\\\]__g')"
+  export TITLE_INFO='\w'
   export PS1="\[\033]0;${TITLE_INFO}\007\]\n${PROMPT_INFO}\n${PSbldwht}\$ ${PStxtrst}"
 
   export EDITOR=vim
 
-  export GOPATH=${HOME}/go
+  export GOPATH="${HOME}/go"
 
   function IsScreen {
     if [ "$TERM" = 'screen' ]; then
